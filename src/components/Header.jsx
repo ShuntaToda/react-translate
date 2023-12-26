@@ -1,12 +1,13 @@
 import React from 'react'
+import { Container, Navbar } from 'react-bootstrap'
 
 const Header = () => {
   return (
-    <nav class="navbar bg-body-tertiary">
-      <h1 class="container-fluid">
-        <a href='/' className="navbar-brand">React Translate</a>
-      </h1>
-    </nav>
+    <Navbar className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">Brand link</Navbar.Brand>
+      </Container>
+    </Navbar>
   )
 }
 
