@@ -8,6 +8,7 @@ import { ChangeButton } from './ChangeButton'
 export const Translate = () => {
   const [fromLang, setFromLang] = useState("en")
   const [toLang, setToLang] = useState("ja")
+  const [textareaHeight, setTextareaHeight] = useState(200)
 
   const changeFromLang = (lang) => {
     if (lang === toLang) {
@@ -28,11 +29,11 @@ export const Translate = () => {
       <Row>
         <Col>
           <Language selected={fromLang} setLang={changeFromLang}></Language>
-          <Input></Input>
+          <Input textareaHeight={textareaHeight} setTextareaHeight={setTextareaHeight}></Input>
         </Col>
         <Col>
           <Language selected={toLang} setLang={changeToLang}></Language>
-          <Output></Output>
+          <Output textareaHeight={textareaHeight}></Output>
         </Col>
       </Row>
     </Container>
