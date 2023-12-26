@@ -1,0 +1,1 @@
+const apiPath = "https://l3t41qfjhb.execute-api.ap-northeast-1.amazonaws.com/dev/translate"
