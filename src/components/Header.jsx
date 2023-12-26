@@ -1,14 +1,12 @@
 import React from 'react'
 import { Container, Navbar } from 'react-bootstrap'
 
-const Header = () => {
+export const Header = () => {
   return (
-    <Navbar className="bg-body-tertiary">
+    <Navbar className="">
       <Container>
-        <Navbar.Brand href="#home">Brand link</Navbar.Brand>
+        <Navbar.Brand href="/">React Translate</Navbar.Brand>
       </Container>
     </Navbar>
   )
 }
-
-export default Header
