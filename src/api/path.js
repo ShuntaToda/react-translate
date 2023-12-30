@@ -1,0 +1,1 @@
+export const apiPath = "https://q0uaty8gwa.execute-api.ap-northeast-1.amazonaws.com/dev/translate"
