@@ -15,6 +15,10 @@ export const History = () => {
 
     get()
   }, [historiesNum])
+
+  const handleMore = () => {
+    setHistoriesNum(n => n + 5)
+  }
   return (
     <Container className='mt-4'>
       <h2 className='fs-5 fw-normal'>History</h2>
@@ -24,7 +28,7 @@ export const History = () => {
         ))}
       </div>
       <div className='text-center mt-3'>
-        <Button variant='outline-primary'>More</Button>
+        <Button variant='outline-primary' onClick={handleMore}>More</Button>
       </div>
     </Container>
   )
