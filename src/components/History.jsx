@@ -6,22 +6,25 @@ import { getHistory } from '../api/histroy'
 export const History = () => {
   const [historiesNum, setHistoriesNum] = useState(5)
   const [hisotries, setHistories] = useState([])
-  useEffect(() => {
-    const get = async () => {
-      const data = await getHistory(historiesNum)
-      console.log(data)
-      setHistories(data.records.Items)
-    }
 
-    get()
-  }, [historiesNum])
+  const get = async () => {
+    const data = await getHistory(historiesNum)
+    console.log(data)
+    setHistories(data.records.Items)
+  }
+
+  useEffect(() => { get() }, [historiesNum])
+
 
   const handleMore = () => {
     setHistoriesNum(n => n + 5)
   }
   return (
     <Container className='mt-4'>
-      <h2 className='fs-5 fw-normal'>History</h2>
+      <div className='d-flex'>
+        <h2 className='fs-5 fw-normal'>History</h2>
+        <div onClick={get} className='ms-3 btn btn-sm btn-outline-primary'>reload</div>
+      </div>
       <div>
         {hisotries.map((item, index) => (
           <HistoryContent item={item} key={index}></HistoryContent>
