@@ -29,7 +29,7 @@ export const Translate = () => {
 
   const handleTranslate = async (inputText, save = false) => {
     console.log(inputText)
-    const data = await postHistory(inputText, fromLang, toLang, save)
+    const data = await postHistory(inputText, fromLang, toLang, save ? 1 : 0)
     console.log(data)
     setoutputText(data.output_text)
   }
