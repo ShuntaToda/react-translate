@@ -1,7 +1,8 @@
-import React, { useEffect, useId, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Container } from 'react-bootstrap'
 import { HistoryContent } from './HistoryContent'
 import { getHistory } from '../api/histroy'
+import { TbReload } from "react-icons/tb";
 
 export const History = () => {
   const [historiesNum, setHistoriesNum] = useState(5)
@@ -23,7 +24,7 @@ export const History = () => {
     <Container className='mt-4'>
       <div className='d-flex'>
         <h2 className='fs-5 fw-normal'>History</h2>
-        <div onClick={get} className='ms-3 btn btn-sm btn-outline-primary'>reload</div>
+        <div onClick={get} className='ms-3 btn btn-sm btn-outline-primary'><TbReload /></div>
       </div>
       <div>
         {hisotries.map((item, index) => (

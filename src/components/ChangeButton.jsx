@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import { LiaExchangeAltSolid } from "react-icons/lia";
 
 export const ChangeButton = ({ setFromLang, setToLang, fromLang, toLang }) => {
 
@@ -10,6 +11,6 @@ export const ChangeButton = ({ setFromLang, setToLang, fromLang, toLang }) => {
   }
 
   return (
-    <Button onClick={exchangeLang} variant="outline-primary" size='sm' className='position-absolute start-50 translate-middle mt-4'>←→</Button>
+    <Button onClick={exchangeLang} variant="outline-primary" size='sm' className='position-absolute start-50 translate-middle mt-4'><LiaExchangeAltSolid /></Button>
   )
 }
